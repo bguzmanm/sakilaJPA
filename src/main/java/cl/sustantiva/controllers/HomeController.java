@@ -37,18 +37,8 @@ public class HomeController {
     @GetMapping(path = { "/", "/{nombre}" })
     public String paginaInicio(@PathVariable Optional<String> nombre, HttpServletRequest request, Model modelo) {
 
-
-        // Verificar si el parámetro ingresado por url está presente
-        if (nombre.isPresent()) {
-            // Agregar nombre al modelo
-            modelo.addAttribute("nombre", nombre.get());
-
-            // Mostrar página
-            return "home2";
-        }
-
         // Mostrar página
-        return "home";
+        return "index";
     }
 
 }

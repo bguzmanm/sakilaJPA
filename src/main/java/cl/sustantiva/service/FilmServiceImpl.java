@@ -35,6 +35,12 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
+    public void update(int film_id, String title, String description, int release_year, String rating) {
+        this.update(new Film(film_id, title, description, release_year, rating));
+
+    }
+
+    @Override
     public void delete(int id) {
         fr.delete(fr.getOne(id));
     }

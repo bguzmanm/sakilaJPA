@@ -1,14 +1,11 @@
 package cl.sustantiva.controllers;
 
-import cl.sustantiva.entity.Film;
 import cl.sustantiva.service.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.*;
+
 
 @Controller
 @RequestMapping(value="/films")
@@ -29,6 +26,18 @@ public class FilmController {
 
         model.addAttribute("pelicula", fs.read(id));
         return "pelicula";
+
+    }
+
+    @PostMapping(value="/edit/")
+    public String editFilms(@RequestParam("film_id") int film_id,
+                            @RequestParam("title") String title,
+                            @RequestParam("description") String description,
+                            @RequestParam("release_year") int release_year,
+                            @RequestParam("rating") String rating){
+
+        fs.update(film_id,title, description, release_year, rating);
+        return "redirect:/films";
 
     }
 

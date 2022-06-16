@@ -12,6 +12,9 @@ public interface FilmService {
     public List<Film> read();
     public Film read(int id);
     public void update(Film f);
+
+    public void update(int film_id, String title, String description, int release_year, String rating);
+
     public void delete(int id);
 
 }

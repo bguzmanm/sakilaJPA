@@ -38,9 +38,9 @@
                 <td>
                     <a href="${pageContext.request.contextPath}/films/edit/${p.getFilm_id()}" title="Editar Película"><i
                             class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="${pageContext.request.contextPath}/peliculas/del/${p.getFilm_id()}" title="Borrar Película"><i
+                    <a href="${pageContext.request.contextPath}/films/del/${p.getFilm_id()}" title="Borrar Película"><i
                             class="fa-solid fa-trash-can"></i></a>
-                    <a href="${pageContext.request.contextPath}/actores/pelicula/${p.getFilm_id()}" title="Ver Actores">
+                    <a href="${pageContext.request.contextPath}/actors/film/${p.getFilm_id()}" title="Ver Actores">
                         <i class="fa-solid fa-user-group"></i></a>
                 </td>
             </tr>

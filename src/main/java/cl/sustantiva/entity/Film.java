@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Table(name="Film")
 public class Film {
 
-
     @Id
     @Column(name="film_id")
     private int film_id;

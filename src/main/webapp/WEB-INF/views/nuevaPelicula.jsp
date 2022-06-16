@@ -12,7 +12,7 @@
 <main>
   <h1>Crea una nueva Película</h1>
 
-  <form class="form-container" action="${pageContext.request.contextPath}/peliculas/new" method="post" name="new">
+  <form class="form-container" action="${pageContext.request.contextPath}/films/new" method="post" name="new">
 
     <h2>Editar Película</h2>
     <div class="mb-3">

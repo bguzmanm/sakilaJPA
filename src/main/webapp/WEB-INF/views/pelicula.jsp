@@ -12,7 +12,7 @@
 <main>
   <h1>${pelicula.getTitle()}</h1>
 
-  <form class="form-container" action="${pageContext.request.contextPath}/peliculas" method="post" name="edit">
+  <form class="form-container" action="${pageContext.request.contextPath}/films" method="post" name="edit">
     <input type="hidden" name="film_id" id="film_id" value="${pelicula.getFilm_id()}">
     <h2>Editar Película</h2>
     <div class="mb-3">
